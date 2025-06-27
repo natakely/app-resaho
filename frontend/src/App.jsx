@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Login from "./page/Login";
-import Register from "./page/Reegister";
+import Register from "./page/Register";
 
 function App() {
   return (

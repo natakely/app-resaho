@@ -20,16 +20,16 @@ const corsOptions = {
 // 📡 Middlewares
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cookieParser()); // nécessaire pour lire les cookies JWT
+app.use(cookieParser()); 
 
 // 🔌 Connexion DB
 connectDb();
 
-app.use("/api/auth", authRoutes); // login, register, etc.
+app.use("/api/auth", authRoutes); 
 
-app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hello from the backend test!" });
-});
+// app.get("/api/hello", (req, res) => {
+//   res.json({ message: "Hello from the backend test!" });
+// });
 
 app.get("/", (req, res) => {
   res.send("Bienvenue sur l'API backend !");
